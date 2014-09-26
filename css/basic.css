@@ -2,15 +2,25 @@
 
 /* Börjar med att lägga upp alla selektorer som jag kommer att arbeta med (det är selektorer som de kallas för eller?). */
 
+/* Colors
+   #51473D     topbar/text
+   #EAE7D2     content
+   #797066     menu (eller opacity)
+*/   
+
 #container {
-    width: 900px;
+    width: 600px;
     margin: 0 auto;
     border: solid black;
     
 }
-
+/* Behövde kolla upp hur man gjorde det kursivt/italic (har koll på det nu) */
 #topbar {
-    border: solid 1px black;
+    background-color: #51473D;
+    color: white;
+    text-align: right;
+    font-style: italic;
+    font-size: .8em;
 }
 
 #menu {
