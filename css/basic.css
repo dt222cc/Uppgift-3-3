@@ -70,12 +70,13 @@ ul {
     display: inline;
     background-color: #797066;
     padding: 8px 10px 8px 10px;
+    text-transform: capitalize;
 }
 
 /* Vit text ingen underlinje. */
 #menu a:link, #menu a:visited {
     background-color: #797066;
-    color: white;
+    color: #EAE7D2;
     text-decoration: none;
 }
 
@@ -106,10 +107,14 @@ img {
     border-left: 1px dashed;
     font-size: 10px;
     padding: 10px;
-    margin-bottom: 40px;
-    /* La till margin-bottom för att trycka ner bottomcontent, slutade funka helt plötsligt (återkommer till det) */
 }
 
+/* Fastnade här en stund, bottomcontent täckte för mycket yta, clear: both; löste det för mig. */
 #bottomcontent {
-    
+    width: 600px;
+    padding-left: 10px;
+    font-size: 10px;
+    font-style: italic;
+    clear: both;
 }
+
