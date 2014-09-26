@@ -26,7 +26,8 @@ h1, h2 {
 p {
     line-height: 20px;
 }
-/* Behövde kolla upp hur man gjorde det kursivt/italic. Känns som jag har valt rätt teckensnitt, Verdana. */
+/* Behövde kolla upp hur man gjorde det kursivt/italic. Missade delen om teckensnitt i laborationsanvisnigarna -.- */
+/* Testar att ha bilden i topbar, fick läsa mer om bakgrundsställning. */
 #topbar {
     background-color: #51473D;
     color: white;
@@ -35,9 +36,14 @@ p {
     font-family: Verdana;
     font-size: 10px;
     padding: 4px 0px 4px 0px;
+    background-image: url(pics/coffey.jpg);
+    background-repeat: no-repeat;
+    background-position: right 20px;
+    height: 250px;
 }
 /* Inte säker på hur jag ska göra menyn, så jag tar det senare. */
 #menu {
+    
 }
 
 .active {
