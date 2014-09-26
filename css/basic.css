@@ -1,30 +1,43 @@
-/* Denna fil får du editera för att lösa uppgiften. Du får INTE ändra i html-filen. */
+/* Denna fil får du editera för att lösa uppgiften. Du får INTE ändra i html-filen.
 
-/* Börjar med att lägga upp alla selektorer som jag kommer att arbeta med (det är selektorer som de kallas för eller?). */
+  Börjar med att lägga upp alla selektorer som jag kommer att arbeta med(det är selektorer som de kallas för eller?).
 
-/* Colors
-   #51473D     topbar/text
+   Colors
+   #51473D     topbar
    #EAE7D2     content
-   #797066     menu (eller opacity)
-*/   
+   #797066     menu/text
+   #9C9084     hover 
 
+   Jag kör på med px istället för em. */
+
+/* Bredd på 600px och centrad.  */
 #container {
     width: 600px;
     margin: 0 auto;
+    color: #797066;
+    font-family: Verdana;
+    font-size: 14px;
 }
-/* Behövde kolla upp hur man gjorde det kursivt/italic */
+/* Rubrikerna är i Times New Roman. "Read more:" som är i h2 ska justeras vidare. */
+h1, h2 {
+    font-family: Times New Roman;
+}
+/* Skillnaden mellan raderna för stycken verkar passa med 20px. */
+p {
+    line-height: 20px;
+}
+/* Behövde kolla upp hur man gjorde det kursivt/italic. Känns som jag har valt rätt teckensnitt, Verdana. */
 #topbar {
     background-color: #51473D;
     color: white;
     text-align: right;
     font-style: italic;
-    font-family: verdana;
-    font-size: .5em;
+    font-family: Verdana;
+    font-size: 10px;
     padding: 4px 0px 4px 0px;
 }
-
+/* Inte säker på hur jag ska göra menyn, så jag tar det senare. */
 #menu {
-    border: solid 1px black;
 }
 
 .active {
@@ -32,17 +45,31 @@
 }
 
 #content {
-    border: solid 1px black;
+    background-color: #EAE7D2;
 }
-
+/* Bredden är inte där jag vill att den ska vara just nu. */
 #maincontent {
-    border: solid 1px black;
+    float: left;
+    width: 340px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
 }
-
+/* Kaffe bilden. */
+img {
+    float: left;
+    padding-right: 5px;
+}
+/* Tycker att bredden passar bra, ska justera "Read more:" och "border-left".*/
 #subcontent {
-    border: solid 1px black;
+    float: right;
+    width: 215px;
+    border-left: 1px dashed;
+    font-size: 10px;
+    padding: 10px;
+    margin-bottom: 40px;     /* La till margin-bottom för att trycka ner bottomcontent */
 }
 
 #bottomcontent {
-    border: solid 1px black;
+    
 }
