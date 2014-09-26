@@ -11,16 +11,16 @@
 #container {
     width: 600px;
     margin: 0 auto;
-    border: solid black;
-    
 }
-/* Behövde kolla upp hur man gjorde det kursivt/italic (har koll på det nu) */
+/* Behövde kolla upp hur man gjorde det kursivt/italic */
 #topbar {
     background-color: #51473D;
     color: white;
     text-align: right;
     font-style: italic;
-    font-size: .8em;
+    font-family: verdana;
+    font-size: .5em;
+    padding: 4px 0px 4px 0px;
 }
 
 #menu {
