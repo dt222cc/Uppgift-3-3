@@ -3,15 +3,18 @@
 /* Börjar med att lägga upp alla selektorer som jag kommer att arbeta med (det är selektorer som de kallas för eller?). */
 
 #container {
+    width: 900px;
+    margin: 0 auto;
+    border: solid black;
     
 }
 
 #topbar {
-    
+    border: solid 1px black;
 }
 
 #menu {
-    
+    border: solid 1px black;
 }
 
 .active {
@@ -19,17 +22,17 @@
 }
 
 #content {
-    
+    border: solid 1px black;
 }
 
 #maincontent {
-    
+    border: solid 1px black;
 }
 
 #subcontent {
-    
+    border: solid 1px black;
 }
 
 #bottomcontent {
-    
+    border: solid 1px black;
 }
