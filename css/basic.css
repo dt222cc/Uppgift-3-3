@@ -17,15 +17,19 @@
     color: #797066;
     font-family: Verdana;
     font-size: 14px;
+    background-color: #EAE7D2;
 }
+
 /* Rubrikerna är i Times New Roman. "Read more:" som är i h2 ska justeras vidare. */
 h1, h2 {
     font-family: Times New Roman;
 }
+
 /* Skillnaden mellan raderna för stycken verkar passa med 20px. */
 p {
     line-height: 20px;
 }
+
 /* Behövde kolla upp hur man gjorde det kursivt/italic. Missade delen om teckensnitt i laborationsanvisnigarna -.- */
 /* Testar att ha bilden i topbar, fick läsa mer om bakgrundsställning. */
 #topbar {
@@ -41,18 +45,45 @@ p {
     background-position: right 20px;
     height: 250px;
 }
-/* Inte säker på hur jag ska göra menyn, så jag tar det senare. */
+
+/* Varför är menyn så jobbigt? */
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;;
+}
+
 #menu {
-    
+    padding-left: 10px;
+    margin-top: -30px;
+    padding-top: 5px;
+    padding-bottom: 9px;
 }
 
-.active {
-    
+/* Bort med den första länken! */
+#menu > a:first-child {
+    display: none;
 }
 
+/* Läste om hur jag kunde göra menyn horisontell (med display:inline) */
+#menu li {
+    display: inline;
+    background-color: #797066;
+    padding: 8px 10px 8px 10px;
+}
+
+/* Vit text ingen underlinje. */
+#menu a:link, #menu a:visited {
+    background-color: #797066;
+    color: white;
+    text-decoration: none;
+}
+
+/* Endast bakgrundsfärg just nu. */
 #content {
     background-color: #EAE7D2;
 }
+
 /* Bredden är inte där jag vill att den ska vara just nu. */
 #maincontent {
     float: left;
@@ -61,11 +92,13 @@ p {
     padding-right: 10px;
     font-size: 13px;
 }
+
 /* Kaffe bilden. */
 img {
     float: left;
     padding-right: 5px;
 }
+
 /* Tycker att bredden passar bra, ska justera "Read more:" och "border-left".*/
 #subcontent {
     float: right;
@@ -73,7 +106,8 @@ img {
     border-left: 1px dashed;
     font-size: 10px;
     padding: 10px;
-    margin-bottom: 40px;     /* La till margin-bottom för att trycka ner bottomcontent */
+    margin-bottom: 40px;
+    /* La till margin-bottom för att trycka ner bottomcontent, slutade funka helt plötsligt (återkommer till det) */
 }
 
 #bottomcontent {
