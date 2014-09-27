@@ -1,7 +1,5 @@
 /* Denna fil får du editera för att lösa uppgiften. Du får INTE ändra i html-filen.
 
-  Börjar med att lägga upp alla selektorer som jag kommer att arbeta med(det är selektorer som de kallas för eller?).
-
    Colors
    #51473D     topbar
    #EAE7D2     content
@@ -10,7 +8,7 @@
 
    Jag kör på med px istället för em. */
 
-/* Bredd på 600px och centrad.  */
+/* Bredd på 600px och centrerad etc.  */
 #container {
     width: 600px;
     margin: 0 auto;
@@ -18,16 +16,7 @@
     font-family: Verdana;
     font-size: 14px;
     background-color: #EAE7D2;
-}
-
-/* Rubrikerna är i Times New Roman. "Read more:" som är i h2 ska justeras vidare. */
-h1, h2 {
-    font-family: Times New Roman;
-}
-
-/* Skillnaden mellan raderna för stycken verkar passa med 20px. */
-p {
-    line-height: 20px;
+    border: 1px solid #9C9084;
 }
 
 /* Behövde kolla upp hur man gjorde det kursivt/italic. Missade delen om teckensnitt i laborationsanvisnigarna -.- */
@@ -37,7 +26,6 @@ p {
     color: white;
     text-align: right;
     font-style: italic;
-    font-family: Verdana;
     font-size: 10px;
     padding: 4px 0px 4px 0px;
     background-image: url(pics/coffey.jpg);
@@ -46,44 +34,84 @@ p {
     height: 250px;
 }
 
-/* Varför är menyn så jobbigt? */
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;;
-}
-
+/* Varför är menyn så jobbigt? (Det som tog mest tid för mig att göra klart) Det som saknas med menyn är nu bredden. */
 #menu {
+    margin-top: -38px;
     padding-left: 10px;
-    margin-top: -30px;
     padding-top: 5px;
-    padding-bottom: 9px;
 }
 
-/* Bort med den första länken! */
-#menu > a:first-child {
-    display: none;
-}
+    /* Bort med prickarna etc. */
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    /* Läste om hur jag kunde göra menyn horisontell. Finns tydligen olika sätt, testade köra med denna. */
+    #menu li {
+        display: inline-block;
+        background-color: #797066;
+        text-transform: capitalize;
+        padding: 8px;
+        margin-right: -3px;
+    }
+    
+        /* En konstig fix för det extra padding/margin som fanns där. */
+        #menu a {
+            padding: 8px 10px 8px 10px;
+            margin-left: -7px;
+            margin-right: -7px;
+        }
+        
+        /* Bort med den första länken! */
+        #menu > a {
+            display: none;
+        }
+        
+        /* Vit text ingen underlinje. */
+        #menu a:link, #menu a:visited {
+            color: #EAE7D2;
+            text-decoration: none;
+        }
+        
+        /* Mouseover, körde med auto. https://developer.mozilla.org/en-US/docs/Web/CSS/cursor */
+        #menu a:hover {
+            background-color: #9C9084;
+            pointer: auto;
+        }
+        
+        /* Sigh... behövde ärligt talat kolla hur andra gjorde detta eftersom bara ".active" funkade inte och
+           "#menu .active" funkade inte. behövde lägga till ett "a". */
+        #menu .active a {
+            background-color: #EAE7D2;
+            color: #797066;
+    }
 
-/* Läste om hur jag kunde göra menyn horisontell (med display:inline) */
-#menu li {
-    display: inline;
-    background-color: #797066;
-    padding: 8px 10px 8px 10px;
-    text-transform: capitalize;
-}
-
-/* Vit text ingen underlinje. */
-#menu a:link, #menu a:visited {
-    background-color: #797066;
-    color: #EAE7D2;
-    text-decoration: none;
-}
-
-/* Endast bakgrundsfärg just nu. */
+/*Endast bakgrundsfärg just nu. */
 #content {
     background-color: #EAE7D2;
 }
+
+    /* Rubrikerna är i Times New Roman. "Read more:" som är i h2 ska justeras vidare. */
+    h1 {
+        font-family: Times New Roman;
+        font-weight: normal;
+        font-size: 30px;
+    }
+    
+    h2 {
+        font-family: Times New Roman;
+        font-weight: normal;
+        margin: 0;
+        color: #51473D;
+        margin-bottom: 3px;
+    }
+
+    /* Skillnaden mellan raderna för stycken verkar passa med 20px. */
+    p {
+        line-height: 20px;
+    }
 
 /* Bredden är inte där jag vill att den ska vara just nu. */
 #maincontent {
@@ -94,20 +122,43 @@ ul {
     font-size: 13px;
 }
 
-/* Kaffe bilden. */
-img {
-    float: left;
-    padding-right: 5px;
-}
+    /* Kaffe bilden. */
+    img {
+        float: left;
+        padding-right: 5px;
+    }
 
-/* Tycker att bredden passar bra, ska justera "Read more:" och "border-left".*/
+/* Tycker att bredden passar bra. Justering som är kvar är "border-left".*/
 #subcontent {
     float: right;
     width: 215px;
     border-left: 1px dashed;
+    border-color: #9C9084;
     font-size: 10px;
     padding: 10px;
+    margin-top: 10px;
 }
+    
+    /* Normal fontstorlek och såg till att nivåerna mellan main- och subcontent passade bra. */
+    #subcontent > h1 {
+        font-size: 16px;
+        margin-bottom: 23px;
+    }
+    
+    /* Extra mellanrum mellan stycken och "Read more:" */
+    #subcontent > p {
+        margin-bottom: 20px ;
+    }
+    /* Till för länkarna i subcontent. */
+    a:link, a:visited {
+        font-size: 13px;
+        color: #51473D;
+    }
+    
+    /* Lite extra, när man tabbar genom länkarna. */
+    a:focus {
+        background-color: #9C9084;
+    }
 
 /* Fastnade här en stund, bottomcontent täckte för mycket yta, clear: both; löste det för mig. */
 #bottomcontent {
@@ -116,5 +167,6 @@ img {
     font-size: 10px;
     font-style: italic;
     clear: both;
+    padding-bottom: 10px;
 }
 
