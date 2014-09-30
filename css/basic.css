@@ -116,10 +116,10 @@
 /* Bredden är inte där jag vill att den ska vara just nu. */
 #maincontent {
     float: left;
-    width: 340px;
+    width: 346px;
     padding-left: 10px;
-    padding-right: 10px;
     font-size: 13px;
+    margin-bottom: -5px;
 }
 
     /* Kaffe bilden. */
@@ -132,11 +132,11 @@
 #subcontent {
     float: right;
     width: 215px;
-    border-left: 1px dashed;
-    border-color: #9C9084;
     font-size: 10px;
     padding: 10px;
     margin-top: 10px;
+    border-left: 1px dashed;
+    border-color: #9C9084;
 }
     
     /* Normal fontstorlek och såg till att nivåerna mellan main- och subcontent passade bra. */
@@ -147,7 +147,7 @@
     
     /* Extra mellanrum mellan stycken och "Read more:" */
     #subcontent > p {
-        margin-bottom: 20px ;
+        margin-bottom: 25px;
     }
     /* Till för länkarna i subcontent. */
     a:link, a:visited {
@@ -162,8 +162,8 @@
 
 /* Fastnade här en stund, bottomcontent täckte för mycket yta, clear: both; löste det för mig. */
 #bottomcontent {
-    width: 600px;
-    padding-left: 10px;
+    width: 580px;
+    margin-left: 10px;
     font-size: 10px;
     font-style: italic;
     clear: both;
